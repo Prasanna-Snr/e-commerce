@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* CSS styles for the navigation bar */
+    .navbar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background-color: #334455;
+      padding: 10px;
+    }
+
+    .navbar .logout-btn {
+      background-color: #ff0000;
+      color: #fff;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    .navbar .welcome-message {
+      margin-right: 20px;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="welcome-message">Welcome: <span id="username">John Doe</span></div>
+    <button class="logout-btn">Logout</button>
+  </div>
+
+  
+
+  <script>
+    // JavaScript code to handle the logout button click event
+    document.querySelector('.logout-btn').addEventListener('click', function() {
+      // Perform logout actions here
+      alert('Logout clicked!');
+    });
+  </script>
+</body><br>
+</html>

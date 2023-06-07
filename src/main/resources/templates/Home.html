@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>home</title>
+<style>
+    /* CSS styles for the jumbotron */
+    .jumbotron {
+      background-color: #f8f9fa;
+      text-align: center;
+      padding: 50px;
+      margin: 50px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .jumbotron h1 {
+      color: #333;
+      font-size: 50px;
+    }
+
+    /* CSS styles for the cards */
+    .card-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .card {
+      flex: 1;
+      max-width: 45%;
+      background-color: #f2f2f2;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .card h2 {
+      color: #333;
+      font-size: 32px;
+    }
+
+    .manage-button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div th:insert="AdminHeader.html"></div>
+  <div class="jumbotron">
+    <h1>Welcome back, Admin</h1>
+    <p>Easily manage your data from this admin.<mark>OWNER</mark></p>
+  </div>
+
+  <div class="card-container">
+    <div class="card">
+      <h2>Categories</h2>
+      <p>Manage the categories section here.</p>
+      
+    <a href="/category">  <button class="manage-button">Manage</button></a>
+    </div>
+
+    <div class="card">
+      <h2>Product</h2>
+      <p>Manage all the products here.</p>
+     <a href="/product"> <button class="manage-button">Manage</button></a>
+    </div>
+  </div>
+</body>
+</html>

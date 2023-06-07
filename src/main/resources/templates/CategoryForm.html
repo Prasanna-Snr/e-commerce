@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>	
+<meta charset="UTF-8">
+<title>Category</title>
+<!-- Add the necessary CSS and JavaScript dependencies -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div th:insert="AdminHeader.html"></div>
+
+<div class="container mt-5">
+  <a href="/addCat" class="btn btn-primary mb-3">Add Category</a>
+  
+  <table id="CateTable" class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Category Name</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr th:each="cate : ${categoryList}">
+        <td th:text="${cate.id}"></td>
+        <td th:text="${cate.name}"></td>
+        <td>
+          <a th:href="@{/edit(id=${cate.id})}" class="btn btn-success btn-sm">Edit</a>
+          <a th:href="@{/delete(id=${cate.id})}" class="btn btn-danger btn-sm">Delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#CateTable').DataTable();
+  });
+</script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

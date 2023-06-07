@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .category-selection {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .category-toggle {
+            margin-left: 5px;
+        }
+
+        .category-slide {
+            margin-top: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .image-preview {
+            margin-top: 10px;
+            display: none;
+            align-items: center;
+        }
+
+        .image-preview img {
+            max-width: 200px;
+            margin-right: 10px;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div th:insert="AdminHeader.html"></div>
+    <div class="container">
+        <h1>Edit Product</h1>
+          <form th:object="${oldProduct}" action="/saveProduct" method="post" enctype="multipart/form-data">
+            <label for="name">Name:</label>
+            <input type="text" id="name" th:field="*{name}" >
+            
+            <label for="price">Price:</label>
+            <input type="number" id="price" th:field="*{price}" >
+            
+            <label for="weight">Weight:</label>
+            <input type="number" id="weight" th:field="*{weight}" >
+            
+            <label for="description">Description:</label>
+            <textarea id="description" th:field="*{description}" ></textarea>
+            
+            <label for="image">Image:</label>
+            <input type="file" id="image" th:field="*{image}" accept="image/*" >
+            <div class="image-preview" id="imagePreview">
+                <img src="#" alt="Image Preview">
+            </div>
+            
+            <div class="category-selection">
+                <label for="category">Select Category:</label>
+                <select id="category" th:field="*{category}">
+                    <option value="">-- Select --</option>
+                    <option th:each="category : ${categories}" th:value="${category.id}" th:text="${category.name}"></option>
+                </select>
+            </div>
+            
+            <input type="submit" value="Update">
+            <input type="hidden" th:field="*{id}">
+        </form>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Function to handle file input change event
+        function handleFileInputChange(event) {
+            var fileInput = event.target;
+            var imagePreview = document.getElementById("imagePreview");
+            var previewImage = imagePreview.querySelector("img");
+
+            // Check if a file is selected
+            if (fileInput.files && fileInput.files[0]) {
+                var reader = new FileReader();
+
+                // Set the image source when the file is loaded
+                reader.onload = function (e) {
+                    previewImage.src = e.target.result;
+                };
+
+                reader.readAsDataURL(fileInput.files[0]);
+
+                // Show the image preview
+                imagePreview.style.display = "flex";
+            } else {
+                // Hide the image preview if no file is selected
+                imagePreview.style.display = "none";
+            }
+        }
+
+        // Add event listener to the file input
+        var fileInput = document.getElementById("image");
+        fileInput.addEventListener("change", handleFileInputChange);
+    </script>
+</body>
+</html>

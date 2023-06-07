@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org	">
+<head>
+  <title>Category Form</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f8f9fa; /* Background color for the form container */
+    }
+
+    .form-container h2 {
+      text-align: center;
+    }
+
+    .form-container .form-group label {
+      font-weight: bold;
+    }
+
+    .form-container .form-group input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .form-container .form-group button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #28a745; 
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<div th:insert="AdminHeader.html"></div>
+  <div class="container">
+    <div class="form-container">
+      <h2>Add Category</h2>
+      <form action="/saveCat" method="post">
+        <div class="form-group">
+          <label for="categoryName">Category Name:</label>
+          <input type="text" id="categoryName" name="name" placeholder="Enter category name" required="required">
+        </div>
+        <input type="submit" value="submit" class="btn btn-success">
+      </form>
+    </div>
+  </div>
+</body>
+</html>
