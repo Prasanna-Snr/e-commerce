@@ -1,356 +1,392 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    
-    <title>Indigo - A clean, responsive ecommerce HTML template</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Aroma Shop - Cart</title>
+	<link rel="icon" href="img/Fevicon.png" type="image/png">
+  <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="vendors/themify-icons/themify-icons.css">
+	<link rel="stylesheet" href="vendors/linericon/style.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.theme.default.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="vendors/nice-select/nice-select.css">
+  <link rel="stylesheet" href="vendors/nouislider/nouislider.min.css">
 
-    <meta name="description" content="Indigo - A clean, responsive ecommerce HTML template">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-
-    <link rel="stylesheet" href="css/normalize-and-boilerplate.css" />
-    <link rel="stylesheet" href="css/font-awesome.css" />
-    <link rel="stylesheet" href="css/flexslider.css" />
-    <link rel="stylesheet" href="css/style.css" />
-
-    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-  </head>
-  <body>
-
-
-    <!-- start: header -->
-    <header class="header">
-      <div class="row max-inner">
-          
-        <div class="columns col-2">
-          <a href="index.html" title="Indigo" class="logo">Indigo</a>
-        </div>
-
-        <div class="columns col-6">
-          <a href="#" class="toggle-nav">
-            <i class="fa fa-bars"></i> Menu
-          </a>
-          <nav class="main-nav">
-            <ul>
-              <li><a href="shop.html">New collection</a></li>
-              <li><a href="shop.html">Catalog</a></li>
-              <li><a href="shop.html">Promotion</a></li>
-              <li><a href="shop.html">Gift card</a></li>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!--================ Start Header Menu Area =================-->
+	<header class="header_area">
+    <div class="main_menu">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+            <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item active submenu dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                  aria-expanded="false">Shop</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"><a class="nav-link" href="category.html">Shop Category</a></li>
+                  <li class="nav-item"><a class="nav-link" href="single-product.html">Product Details</a></li>
+                  <li class="nav-item"><a class="nav-link" href="checkout.html">Product Checkout</a></li>
+                  <li class="nav-item"><a class="nav-link" href="confirmation.html">Confirmation</a></li>
+                  <li class="nav-item"><a class="nav-link" href="cart.html">Shopping Cart</a></li>
+                </ul>
+							</li>
+              <li class="nav-item submenu dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                  aria-expanded="false">Blog</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                  <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+                  <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
+                </ul>
+							</li>
+							<li class="nav-item submenu dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                  aria-expanded="false">Pages</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                  <li class="nav-item"><a class="nav-link" href="tracking-order.html">Tracking</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
+
+            <ul class="nav-shop">
+              <li class="nav-item"><button><i class="ti-search"></i></button></li>
+              <li class="nav-item"><button><i class="ti-shopping-cart"></i><span class="nav-shop__circle">3</span></button> </li>
+              <li class="nav-item"><a class="button button-header" href="#">Buy Now</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+	<!--================ End Header Menu Area =================-->
+
+	<!-- ================ start banner area ================= -->	
+	<section class="blog-banner-area" id="category">
+		<div class="container h-100">
+			<div class="blog-banner">
+				<div class="text-center">
+					<h1>Shopping Cart</h1>
+					<nav aria-label="breadcrumb" class="banner-breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Shopping Cart</li>
+            </ol>
           </nav>
-        </div>
+				</div>
+			</div>
+    </div>
+	</section>
+	<!-- ================ end banner area ================= -->
+  
+  
 
-        <div class="columns col-4">
-          <ul class="header-controls">
-            <li class="header-search">
-              <a href="#" class="reveal-search">
-                <i class="fa fa-search"></i> Search
-              </a>
-              <div class="search-wrapper">
-                <form class="search-form">
-                    <input placeholder="Search..." type="text">
-                </form>                
+  <!--================Cart Area =================-->
+  <section class="cart_area">
+      <div class="container">
+          <div class="cart_inner">
+              <div class="table-responsive">
+                  <table class="table">
+                      <thead>
+                          <tr>
+                              <th scope="col">Product</th>
+                              <th scope="col">Price</th>
+                              <th scope="col">Quantity</th>
+                              <th scope="col">Total</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>
+                                  <div class="media">
+                                      <div class="d-flex">
+                                          <img src="img/cart/cart1.png" alt="">
+                                      </div>
+                                      <div class="media-body">
+                                          <p>Minimalistic shop for multipurpose use</p>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td>
+                                  <h5>$360.00</h5>
+                              </td>
+                              <td>
+                                  <div class="product_count">
+                                      <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
+                                          class="input-text qty">
+                                      <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
+                                          class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
+                                      <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
+                                          class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
+                                  </div>
+                              </td>
+                              <td>
+                                  <h5>$720.00</h5>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                  <div class="media">
+                                      <div class="d-flex">
+                                          <img src="img/cart/cart2.png" alt="">
+                                      </div>
+                                      <div class="media-body">
+                                          <p>Minimalistic shop for multipurpose use</p>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td>
+                                  <h5>$360.00</h5>
+                              </td>
+                              <td>
+                                  <div class="product_count">
+                                      <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
+                                          class="input-text qty">
+                                      <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
+                                          class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
+                                      <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
+                                          class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
+                                  </div>
+                              </td>
+                              <td>
+                                  <h5>$720.00</h5>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                  <div class="media">
+                                      <div class="d-flex">
+                                          <img src="img/cart/cart3.png" alt="">
+                                      </div>
+                                      <div class="media-body">
+                                          <p>Minimalistic shop for multipurpose use</p>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td>
+                                  <h5>$360.00</h5>
+                              </td>
+                              <td>
+                                  <div class="product_count">
+                                      <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
+                                          class="input-text qty">
+                                      <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
+                                          class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
+                                      <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
+                                          class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
+                                  </div>
+                              </td>
+                              <td>
+                                  <h5>$720.00</h5>
+                              </td>
+                          </tr>
+                          <tr class="bottom_button">
+                              <td>
+                                  <a class="button" href="#">Update Cart</a>
+                              </td>
+                              <td>
+
+                              </td>
+                              <td>
+
+                              </td>
+                              <td>
+                                  <div class="cupon_text d-flex align-items-center">
+                                      <input type="text" placeholder="Coupon Code">
+                                      <a class="primary-btn" href="#">Apply</a>
+                                      <a class="button" href="#">Have a Coupon?</a>
+                                  </div>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+
+                              </td>
+                              <td>
+
+                              </td>
+                              <td>
+                                  <h5>Subtotal</h5>
+                              </td>
+                              <td>
+                                  <h5>$2160.00</h5>
+                              </td>
+                          </tr>
+                          <tr class="shipping_area">
+                              <td class="d-none d-md-block">
+
+                              </td>
+                              <td>
+
+                              </td>
+                              <td>
+                                  <h5>Shipping</h5>
+                              </td>
+                              <td>
+                                  <div class="shipping_box">
+                                      <ul class="list">
+                                          <li><a href="#">Flat Rate: $5.00</a></li>
+                                          <li><a href="#">Free Shipping</a></li>
+                                          <li><a href="#">Flat Rate: $10.00</a></li>
+                                          <li class="active"><a href="#">Local Delivery: $2.00</a></li>
+                                      </ul>
+                                      <h6>Calculate Shipping <i class="fa fa-caret-down" aria-hidden="true"></i></h6>
+                                      <select class="shipping_select">
+                                          <option value="1">Bangladesh</option>
+                                          <option value="2">India</option>
+                                          <option value="4">Pakistan</option>
+                                      </select>
+                                      <select class="shipping_select">
+                                          <option value="1">Select a State</option>
+                                          <option value="2">Select a State</option>
+                                          <option value="4">Select a State</option>
+                                      </select>
+                                      <input type="text" placeholder="Postcode/Zipcode">
+                                      <a class="gray_btn" href="#">Update Details</a>
+                                  </div>
+                              </td>
+                          </tr>
+                          <tr class="out_button_area">
+                              <td class="d-none-l">
+
+                              </td>
+                              <td class="">
+
+                              </td>
+                              <td>
+
+                              </td>
+                              <td>
+                                  <div class="checkout_btn_inner d-flex align-items-center">
+                                      <a class="gray_btn" href="#">Continue Shopping</a>
+                                      <a class="primary-btn ml-2" href="#">Proceed to checkout</a>
+                                  </div>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
               </div>
-            </li>
-            <li class="header-cart">
-              <a href="cart.html" title="view cart">
-                <span class="fa fa-shopping-cart"></span>
-                <span class="cart-count">3 Products,</span>
-                <span class="cart-amount">$780.00</span>
-              </a>                
-            </li>
-            <li class="header-actions">
-              <a href="#" title="Log out"><span class="fa fa-lock"></span> Log out</a>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-    </header>
-    <!-- end: header -->
-
-    <!-- start: breadcrumbs -->
-    <section class="row breadcrumbs max-inner">
-      <div class="columns col-12">
-        <ul class="breadcrumb-list">
-          <li><a href="index.html">Home</a></li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </section>
-    <!-- end: breadcrumbs -->
-
-
-
-    <!-- start: main content -->
-    <section class="main-content">
-      <div class="row max-inner">
-        
-        <div class="columns col-12">
-        <!-- start: cart form -->
-        <form>
-          <table class="cart-table" cellspacing="0">
-            <thead>
-              <tr>
-                <th class="product-thumbnail">&nbsp;</th>
-                <th class="product-description" colspan="1">Items</th>
-                <th class="product-price">Price</th>
-                <th class="product-quantity">Quantity</th>
-                <th class="product-total">Total</th>
-                <th class="product-remove">&nbsp;</th>
-              </tr>
-            </thead>
-            <tbody>
-
-            <!-- start: cart item -->
-            <tr class="cart-item">
-              <td class="product-thumbnail">
-                <a href="product.html"><img src="images/cart-image-1.jpg"></a>
-              </td>
-              <td class="product-description">
-                <h3><a href="product.html">Lorem ipsum dolor</a></h3>
-                <p>
-                  Dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.                  
-                </p>                
-                <p>
-                  <strong>Size:</strong> XS<br />
-                  <strong>Color:</strong> Black &amp; gray<br />
-                  <strong>Type:</strong> Slim
-                </p>
-              </td>
-              <td class="product-price">
-                $220.00
-              </td>
-              <td class="product-quantity">
-                <label for="quantity-select" class="select-label">
-                  <select class="styled-drop-down"  id="quantity-select" name="quantity-select">
-                    <option selected="selected">1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                  </select>
-                </label>                
-              </td>
-              <td class="product-total">
-                $220.00
-              </td>
-              <td class="product-remove">
-                <a href="#">X</a>
-              </td>
-            </tr> 
-            <!-- end: cart item -->
-
-            <!-- start: cart item -->
-            <tr class="cart-item">
-              <td class="product-thumbnail">
-                <a href="product.html"><img src="images/cart-image-2.jpg"></a>
-              </td>
-              <td class="product-description">
-                <h3><a href="product.html">Lorem ipsum dolor</a></h3>
-                <p>
-                  Dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.                  
-                </p>                
-                <p>
-                  <strong>Size:</strong> XS<br />
-                  <strong>Color:</strong> Black &amp; gray<br />
-                  <strong>Type:</strong> Slim
-                </p>
-              </td>
-              <td class="product-price">
-                $220.00
-              </td>
-              <td class="product-quantity">
-                <label for="quantity-select" class="select-label">
-                  <select class="styled-drop-down"  id="quantity-select" name="quantity-select">
-                    <option selected="selected">1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                  </select>
-                </label>                
-              </td>
-              <td class="product-total">
-                $220.00
-              </td>
-              <td class="product-remove">
-                <a href="#">X</a>
-              </td>
-            </tr> 
-            <!-- end: cart item -->
-
-            <!-- start: cart item -->
-            <tr class="cart-item">
-              <td class="product-thumbnail">
-                <a href="product.html"><img src="images/cart-image-3.jpg"></a>
-              </td>
-              <td class="product-description">
-                <h3><a href="product.html">Lorem ipsum dolor</a></h3>
-                <p>
-                  Dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.                  
-                </p>                
-                <p>
-                  <strong>Size:</strong> XS<br />
-                  <strong>Color:</strong> Black &amp; gray<br />
-                  <strong>Type:</strong> Slim
-                </p>
-              </td>
-              <td class="product-price">
-                $220.00
-              </td>
-              <td class="product-quantity">
-                <label for="quantity-select" class="select-label">
-                  <select class="styled-drop-down"  id="quantity-select" name="quantity-select">
-                    <option selected="selected">1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                  </select>
-                </label>                
-              </td>
-              <td class="product-total">
-                $220.00
-              </td>
-              <td class="product-remove">
-                <a href="#">X</a>
-              </td>
-            </tr> 
-            <!-- end: cart item -->
-
-            </tbody>
-          </table>
-
-
-          <!-- start: cart summary -->
-          <table class="cart-details">
-            <tbody>
-            <tr class="spacer-row"><td colspan="5"></td></tr>
-            <tr>
-              <td class="cart-summary" colspan="3">
-                Summary
-              </td>
-              <td class="cart-subtotals">
-                <span>Subtotal:</span> $780.00
-              </td>
-              <td class="cart-shipping">
-                <span>Shipment:</span> $25.00
-              </td>
-              <td class="cart-total">
-                <span>Total to pay:</span> $805.00
-              </td>
-              <td class="cart-submit">
-                <input type="submit" class="cart-submit" name="cart-submit" value="Finalize and pay" />
-              </td>
-            </tr>
-            </tbody>         
-          </table>
-          <!-- end: cart summary -->   
-
-
-        </form>
-        <!-- end: cart form -->
-        </div>
-
-
-      </div>
-    </section>
-    <!-- end: main content -->
-
-
-
-    <!-- start: footer -->
-    <footer class="footer">
-      <div class="row max-inner">
-        
-        <div class="columns col-2">
-          <h3>Address</h3>
-          <p>
-            INDIGO LLC<br />
-            <br />
-            946 Park Ave<br />
-            New York, NY 10021<br />
-            <br />
-            <a href="#">office@indigo.com</a><br />
-            (445) 932 459 934<br />           
-          </p>
-        </div>
-
-        <div class="columns col-2">
-          <h3>Customer Service</h3>
-          <ul>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Money back guarantee</a></li>
-            <li><a href="#">Help center</a></li>
-            <li><a href="#">Delivery</a></li>
-            <li><a href="#">Payment</a></li>
-          </ul>
-        </div>
-
-        <div class="columns col-2">
-          <h3>Account</h3>
-          <ul>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Register</a></li>
-            <li><a href="#">My Account</a></li>
-            <li><a href="#">Logout</a></li>
-          </ul>
-        </div>
-
-        <div class="columns col-6">
-          <h3>Follow us</h3>
-          <div class="row">
-            <form class="newsletter-form">
-              <div class="columns col-8">
-                <input placeholder="Enter your Email ..." type="text">
-              </div>
-              <div class="columns col-4">
-                <input type="submit" value="Subscribe" class="submit">
-              </div>
-            </form>              
           </div>
-          <div class="row">
-            <div class="columns col-12 social-links">
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-google-plus"></i></a>
-              <a href="#"><i class="fa fa-pinterest"></i></a>
-            </div>            
-          </div>
-        </div>
-
       </div>
-    </footer>
-    <!-- end: footer -->
+  </section>
+  <!--================End Cart Area =================-->
 
 
-    <!-- start: copyright -->
-    <section class="footer-copyright">
-      <div class="row max-inner">
-        <div class="columns col-7 col-centered">
-          <p>Copyright 2014 Indigo. All rights reserved.</p>
-        </div>
-      </div>
-    </section>
-    <!-- end: copyright -->
+
+  <!--================ Start footer Area  =================-->	
+	<footer>
+		<div class="footer-area footer-only">
+			<div class="container">
+				<div class="row section_gap">
+					<div class="col-lg-3 col-md-6 col-sm-6">
+						<div class="single-footer-widget tp_widgets ">
+							<h4 class="footer_title large_title">Our Mission</h4>
+							<p>
+								So seed seed green that winged cattle in. Gathering thing made fly you're no 
+								divided deep moved us lan Gathering thing us land years living.
+							</p>
+							<p>
+								So seed seed green that winged cattle in. Gathering thing made fly you're no divided deep moved 
+							</p>
+						</div>
+					</div>
+					<div class="offset-lg-1 col-lg-2 col-md-6 col-sm-6">
+						<div class="single-footer-widget tp_widgets">
+							<h4 class="footer_title">Quick Links</h4>
+							<ul class="list">
+								<li><a href="#">Home</a></li>
+								<li><a href="#">Shop</a></li>
+								<li><a href="#">Blog</a></li>
+								<li><a href="#">Product</a></li>
+								<li><a href="#">Brand</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-6 col-sm-6">
+						<div class="single-footer-widget instafeed">
+							<h4 class="footer_title">Gallery</h4>
+							<ul class="list instafeed d-flex flex-wrap">
+								<li><img src="img/gallery/r1.jpg" alt=""></li>
+								<li><img src="img/gallery/r2.jpg" alt=""></li>
+								<li><img src="img/gallery/r3.jpg" alt=""></li>
+								<li><img src="img/gallery/r5.jpg" alt=""></li>
+								<li><img src="img/gallery/r7.jpg" alt=""></li>
+								<li><img src="img/gallery/r8.jpg" alt=""></li>
+							</ul>
+						</div>
+					</div>
+					<div class="offset-lg-1 col-lg-3 col-md-6 col-sm-6">
+						<div class="single-footer-widget tp_widgets">
+							<h4 class="footer_title">Contact Us</h4>
+							<div class="ml-40">
+								<p class="sm-head">
+									<span class="fa fa-location-arrow"></span>
+									Head Office
+								</p>
+								<p>123, Main Street, Your City</p>
+	
+								<p class="sm-head">
+									<span class="fa fa-phone"></span>
+									Phone Number
+								</p>
+								<p>
+									+123 456 7890 <br>
+									+123 456 7890
+								</p>
+	
+								<p class="sm-head">
+									<span class="fa fa-envelope"></span>
+									Email
+								</p>
+								<p>
+									free@infoexample.com <br>
+									www.infoexample.com
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row d-flex">
+					<p class="col-lg-12 footer-text text-center">
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--================ End footer Area  =================-->
 
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
-    
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
 
-    <script>
-      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-      g.src='//www.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
-  </body>
+  <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
+  <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="vendors/skrollr.min.js"></script>
+  <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+  <script src="vendors/nice-select/jquery.nice-select.min.js"></script>
+  <script src="vendors/jquery.ajaxchimp.min.js"></script>
+  <script src="vendors/mail-script.js"></script>
+  <script src="js/main.js"></script>
+</body>
 </html>

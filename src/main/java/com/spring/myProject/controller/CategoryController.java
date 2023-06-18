@@ -1,5 +1,9 @@
 package com.spring.myProject.controller;
 
+
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,9 +23,12 @@ public class CategoryController {
 	
 	@GetMapping("/category")
 	public String getCategoryForm(Model model) {
-		model.addAttribute("categoryList",servic.getAllCategory());
-		return "CategoryForm";
+	    List<Category> categories = servic.getAllCategory();
+	    model.addAttribute("categoryList", categories);
+	    return "CategoryForm";
 	}
+
+
 	
 	@GetMapping("/addCat")
 	public String AddCatForm() {

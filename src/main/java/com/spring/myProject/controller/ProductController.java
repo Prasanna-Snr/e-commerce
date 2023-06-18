@@ -1,6 +1,5 @@
 package com.spring.myProject.controller;
 
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -24,90 +23,62 @@ import com.spring.myProject.service.IproductService;
 
 @Controller
 public class ProductController {
-	
-	
-	@Autowired
-	private IcategoryService cateServic;
-	
-	@Autowired
-	private IproductService prodServic;
-	
-	
-	@GetMapping("/product")
-	public String GetProductForm(Model model) {
-		model.addAttribute("product",prodServic.getAllProduct());
-		return "Product";
-	}
-	
-	
-	@GetMapping("/addProduct")
-	public String AddProductForm(Model model) {
-		List<Category> categories= cateServic.getAllCategory();
-		model.addAttribute("categories",categories);
-		return "AddProductForm";
-	}
-	
-	
-//	@PostMapping("/saveProduct")
-//	public String doSaveProduct(@ModelAttribute Product product) {
-//		prodServic.addProduct(product);
-//		return "redirect:/product";
-//	}
-	
 
-	
-	@PostMapping("/saveProduct")
-	public String doSaveProduct(@ModelAttribute Product product, @RequestParam("image") MultipartFile imageFile) {
-	    // Save the product details using prodServic.addProduct()
-	    prodServic.addProduct(product);
+    @Autowired
+    private IcategoryService categoryService;
 
-	    // Check if an image file is uploaded
-	    if (!imageFile.isEmpty()) {
-	        try {
-	            // Specify the desired location and filename for the image
-	            Path imagePath = Paths.get("D:\\my_project\\target\\classes\\static\\images", imageFile.getOriginalFilename());
+    @Autowired
+    private IproductService productService;
 
-	            // Save the image file to the specified location
-	            Files.copy(imageFile.getInputStream(), imagePath, StandardCopyOption.REPLACE_EXISTING);
+    @GetMapping("/product")
+    public String getProductForm(Model model) {
+        List<Product> products = productService.getAllProduct();
+        model.addAttribute("products", products);
+        return "Product";
+    }
 
-	            // Set the image name to the imageName field of the product
-	            product.setImageName(imageFile.getOriginalFilename());
+    @GetMapping("/addProduct")
+    public String addProductForm(Model model) {
+        List<Category> categories = categoryService.getAllCategory();
+        model.addAttribute("categories", categories);
+        return "AddProductForm";
+    }
 
-	            // Update the product in the database to save the image name
-	            prodServic.updateProduct(product);
-	        } catch (IOException e) {
-	            // Handle the exception if there's an error saving the image
-	            e.printStackTrace();
-	            // You can also show an error message to the user
-	        }
-	    }
+    @PostMapping("/saveProduct")
+    public String saveProduct(@ModelAttribute Product product, @RequestParam("image") MultipartFile imageFile) {
+        productService.addProduct(product);
 
-	    return "redirect:/product";
-	}
-	
-	@GetMapping("/deleteProduct")
-	public String deleteProduct(@RequestParam int id) {
-		prodServic.deleteProduct(id);
-		return "redirect:/product";
-	}
+        if (!imageFile.isEmpty()) {
+            try {
+                Path imagePath = Paths.get("src/main/resources/static/images", imageFile.getOriginalFilename());
+                Files.copy(imageFile.getInputStream(), imagePath, StandardCopyOption.REPLACE_EXISTING);
+                product.setImageName(imageFile.getOriginalFilename());
+                productService.updateProduct(product);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
 
-	
-	@GetMapping("editProduct")
-	public String getEditProduct(@RequestParam int id, Model model) {
-		List<Category> categories= cateServic.getAllCategory();
-		model.addAttribute("categories",categories);
-		model.addAttribute("oldProduct",prodServic.getById(id));
-		return "EditProduct";
-	}
-	
-	
-	@PostMapping("/updateProduct")
-	public String updateProduct(@ModelAttribute Product product) {
-		prodServic.updateProduct(product);
-		return "redirect:/product";
-	}
-	
-	
-	
-	
+        return "redirect:/product";
+    }
+
+    @GetMapping("/deleteProduct")
+    public String deleteProduct(@RequestParam int id) {
+        productService.deleteProduct(id);
+        return "redirect:/product";
+    }
+
+    @GetMapping("/editProduct")
+    public String getEditProduct(@RequestParam int id, Model model) {
+        List<Category> categories = categoryService.getAllCategory();
+        model.addAttribute("categories", categories);
+        model.addAttribute("oldProduct", productService.getById(id));
+        return "EditProduct";
+    }
+
+    @PostMapping("/updateProduct")
+    public String updateProduct(@ModelAttribute Product product) {
+        productService.updateProduct(product);
+        return "redirect:/product";
+    }
 }

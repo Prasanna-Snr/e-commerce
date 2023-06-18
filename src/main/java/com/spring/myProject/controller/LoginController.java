@@ -30,7 +30,7 @@ public class LoginController {
 		if(usr != null) {
 			
 			model.addAttribute("username",user.getUname());
-			return "Home";
+			return "UserIndex";
 		}
 		
 		model.addAttribute("message","user not found!!!");
